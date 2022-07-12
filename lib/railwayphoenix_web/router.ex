@@ -1,5 +1,6 @@
 defmodule RailwayphoenixWeb.Router do
   use RailwayphoenixWeb, :router
+  import Phoenix.LiveView.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -38,6 +39,7 @@ defmodule RailwayphoenixWeb.Router do
     scope "/" do
       pipe_through :browser
       live_dashboard "/dashboard", metrics: RailwayphoenixWeb.Telemetry
+      live "/credits", Railwayphoenix.CreditsLive
     end
   end
 

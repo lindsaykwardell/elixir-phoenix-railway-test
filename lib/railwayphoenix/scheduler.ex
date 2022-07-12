@@ -22,7 +22,7 @@ defmodule Railwayphoenix.Scheduler do
   end
 
   defp schedule_work() do
-    Process.send_after(self(), :work, 60 * 60 * 1000) # In 1 hour
+    Process.send_after(self(), :work, 60 * 1000) # In 1 minute
   end
 
   defp collect_revenue(empire) do
