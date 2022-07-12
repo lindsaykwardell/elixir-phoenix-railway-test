@@ -15,9 +15,10 @@ defmodule Railwayphoenix.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Railwayphoenix.PubSub},
       # Start the Endpoint (http/https)
-      RailwayphoenixWeb.Endpoint
+      RailwayphoenixWeb.Endpoint,
       # Start a worker by calling: Railwayphoenix.Worker.start_link(arg)
       # {Railwayphoenix.Worker, arg}
+      Railwayphoenix.Scheduler
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
